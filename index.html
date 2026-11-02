@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>220 W Avenue 26 | Development Site BOV | LAAA Team</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Arial,Helvetica,sans-serif;background:#f4f5f7;color:#1a1a1a;font-size:15px;line-height:1.6}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+header{background:linear-gradient(135deg,#0a2540,#143b6b);color:#fff;border-bottom:4px solid #b8985a;padding:44px 0 36px}
+.eyebrow{text-transform:uppercase;letter-spacing:2.5px;font-size:12px;color:#b8985a;font-weight:700;margin-bottom:10px}
+header h1{font-size:34px;font-weight:700;line-height:1.15;margin-bottom:8px}
+header .subtitle{font-size:16px;color:#cbd5e1;margin-bottom:18px}
+header .meta{font-size:13px;color:#9fb3cd;display:flex;flex-wrap:wrap;gap:6px 22px}
+nav.toc{background:#0a2540;border-bottom:1px solid #1a365a;position:sticky;top:0;z-index:50;box-shadow:0 2px 4px rgba(0,0,0,0.15)}
+nav.toc .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:0;padding:0 24px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+nav.toc a{color:#cbd5e1;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;padding:14px 16px;border-bottom:2px solid transparent;transition:color 0.15s,border-color 0.15s;white-space:nowrap}
+nav.toc a:hover{color:#b8985a;border-bottom-color:#b8985a}
+nav.toc a.first{padding-left:0}
+@media (max-width:760px){nav.toc a{font-size:11px;padding:12px 10px;letter-spacing:0.4px}}
+section[id]{scroll-margin-top:60px}
+main{padding:28px 0 8px}
+section.card{background:#fff;border-radius:8px;box-shadow:0 1px 3px rgba(10,37,64,0.08);padding:28px 30px;margin-bottom:26px}
+section.card h2{color:#0a2540;font-size:22px;padding-bottom:10px;border-bottom:2px solid #b8985a;margin-bottom:18px}
+section.card h3{color:#0a2540;font-size:16px;margin:22px 0 10px}
+p{margin-bottom:12px}
+.stat-band{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:18px 0 6px}
+.stat{background:#f8fafc;border:1px solid #e6e9ef;border-left:3px solid #b8985a;border-radius:6px;padding:12px 14px}
+.stat .l{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#666;margin-bottom:4px}
+.stat .v{font-size:18px;font-weight:700;color:#0a2540;line-height:1.25}
+.stat .s{font-size:12px;color:#666;margin-top:2px}
+.hero-frame{border-radius:8px;overflow:hidden;margin:6px 0 16px;background:#0a2540;aspect-ratio:16/9}
+.hero-frame img{width:100%;height:100%;object-fit:contain;display:block}
+.img-frame{border-radius:8px;overflow:hidden;background:#0a2540}
+.img-frame img{width:100%;height:100%;object-fit:contain;display:block}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:14px 0}
+.two-col .img-frame.sv{aspect-ratio:8/5}
+.caption{font-size:12px;color:#666;margin-top:6px}
+.spec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:16px 0}
+.spec{background:#f8fafc;border:1px solid #e6e9ef;border-radius:6px;padding:12px 16px;font-size:13.5px}
+.spec b{display:block;color:#0a2540;font-size:12px;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:3px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:14px 0 6px}
+th{background:#0a2540;color:#fff;text-align:left;padding:10px 12px;font-size:12px;text-transform:uppercase;letter-spacing:0.6px;white-space:nowrap}
+td{padding:10px 12px;border-bottom:1px solid #e6e9ef;vertical-align:top}
+tr:nth-child(even) td{background:#f8fafc}
+td.num,th.num{text-align:right;white-space:nowrap}
+.psf{font-weight:700;color:#0a2540;white-space:nowrap}
+.psf.hot{color:#c0392b}
+tr.avg td{background:#eef2f7;font-weight:700;color:#0a2540;border-top:2px solid #0a2540}
+.table-scroll{overflow-x:auto}
+.b-closed{background:#e6f4ea;color:#1e7e34;border-radius:4px;padding:2px 8px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;white-space:nowrap}
+td.addr{white-space:nowrap}
+.b-laaa{display:inline-block;background:#b8985a;color:#fff;border-radius:10px;padding:1px 8px;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.4px;white-space:nowrap;margin-left:6px;vertical-align:1px}
+.fn{font-size:12px;color:#666;margin-top:8px}
+.path-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:18px 0 8px}
+.path-card{border:1px solid #e6e9ef;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;background:#fff}
+.path-card .ph{padding:16px 18px;color:#fff;min-height:128px;box-sizing:border-box}
+.path-card.pa .ph{background:linear-gradient(135deg,#0a2540,#143b6b)}
+.path-card.pb .ph{background:linear-gradient(135deg,#3a4a6b,#5a6f9a)}
+.path-card.pc .ph{background:linear-gradient(135deg,#5a4a1f,#8a6f2a)}
+.path-card.pd .ph{background:linear-gradient(135deg,#1f5e3a,#2f8a55)}
+.path-card.pe .ph{background:linear-gradient(135deg,#1f4e5e,#2f7a8a)}
+.path-card.pf .ph{background:linear-gradient(135deg,#4a2f5e,#6f4a8a)}
+.path-card.pg .ph{background:linear-gradient(135deg,#2d6a4f,#40916c)}
+.path-card.ph2 .ph{background:linear-gradient(135deg,#7a3b2e,#a0523d)}
+.path-card .ph .ptag{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;opacity:.88;margin-bottom:6px}
+.path-card .ph .pname{font-size:18px;font-weight:700;line-height:1.2}
+.path-card .ph .punits{font-size:13px;opacity:.92;margin-top:4px}
+.path-card .pb-body{padding:16px 20px;font-size:13.5px;flex:1}
+.path-card .pb-body ul{margin:0 0 0 18px}
+.path-card .pb-body li{margin-bottom:7px;line-height:1.55}
+.path-card .pmetric{display:flex;justify-content:space-between;padding:9px 20px;border-top:1px solid #e6e9ef;font-size:12.5px}
+.path-card .pmetric .l{color:#666}
+.path-card .pmetric .v{font-weight:700;color:#0a2540}
+.info-callout{background:#f8fafc;border:1px solid #e6e9ef;border-left:4px solid #b8985a;border-radius:6px;padding:14px 18px;font-size:13.5px;margin:14px 0}
+.info-callout a{color:#8a6f2a;font-weight:700}
+.tk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:16px 0}
+.tk{background:#f8fafc;border:1px solid #e6e9ef;border-left:4px solid #b8985a;border-radius:6px;padding:16px 18px;font-size:13.5px}
+.tk .n{display:inline-block;background:#0a2540;color:#fff;border-radius:50%;width:24px;height:24px;line-height:24px;text-align:center;font-size:12px;font-weight:700;margin-bottom:8px}
+.tk b{color:#0a2540}
+.recommend{background:linear-gradient(135deg,#8a6f2a,#b8985a);border-radius:8px;color:#fff;padding:26px 28px;margin:18px 0}
+.recommend .r-eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:700;opacity:.9;margin-bottom:6px}
+.recommend .r-band{font-size:30px;font-weight:800;line-height:1.2}
+.recommend .r-sub{font-size:14px;opacity:.95;margin-top:6px}
+.price-compare{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0 4px}
+.pc-box{background:#f8fafc;border:1px solid #e6e9ef;border-radius:6px;padding:14px 16px}
+.pc-box .l{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#666;margin-bottom:4px}
+.pc-box .v{font-size:19px;font-weight:700;color:#0a2540}
+.pc-box .s{font-size:12px;color:#666;margin-top:3px}
+.plat-strip{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.plat{background:#f8fafc;border:1px solid #e6e9ef;border-radius:20px;padding:7px 16px;font-size:13px;font-weight:600;color:#0a2540;white-space:nowrap}
+.inv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin:16px 0}
+a.inv-item{display:flex;flex-direction:column;background:#f8fafc;border:1px solid #e6e9ef;border-left:4px solid #b8985a;border-radius:6px;padding:16px 18px;text-decoration:none;color:#1a1a1a;transition:box-shadow .15s}
+a.inv-item:hover{box-shadow:0 3px 10px rgba(10,37,64,.18)}
+.inv-item .addr{font-weight:700;color:#0a2540;font-size:15px}
+.inv-item .city{font-size:12.5px;color:#666;margin-bottom:6px}
+.inv-item .price{font-size:17px;font-weight:800;color:#0a2540}
+.inv-item .facts{font-size:12.5px;color:#666;margin:3px 0 8px}
+.inv-item .desc{font-size:13px;line-height:1.5;flex:1}
+.inv-item .go{display:inline-block;margin-top:10px;font-size:12px;font-weight:700;color:#8a6f2a;text-transform:uppercase;letter-spacing:.8px}
+.team-leaders{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0}
+.leader{background:#f8fafc;border:1px solid #e6e9ef;border-radius:8px;padding:22px;text-align:center}
+.headshot-img-lg{width:100px;height:100px;border-radius:50%;border:3px solid #b8985a;object-fit:cover;background:#0a2540;display:block;margin:0 auto 12px}
+.leader .nm{font-size:17px;font-weight:700;color:#0a2540}
+.leader .tt{font-size:13px;color:#666;margin:2px 0 8px}
+.leader .ct{font-size:13px;color:#1a1a1a}
+.team-roster{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0}
+.roster-card{background:#f8fafc;border:1px solid #e6e9ef;border-radius:8px;padding:14px 10px;text-align:center}
+.roster-card .headshot-img-lg{width:72px;height:72px;border-width:2px;margin-bottom:10px}
+.roster-card .nm{font-size:13.5px;font-weight:700;color:#0a2540;line-height:1.3}
+.roster-card .tt{font-size:11.5px;color:#666;margin-top:2px}
+footer{background:#0a2540;border-top:4px solid #b8985a;color:#9fb3cd;padding:30px 0;font-size:12.5px;margin-top:34px}
+footer .f-title{color:#fff;font-weight:700;font-size:14px;margin-bottom:6px}
+footer p{margin-bottom:10px;line-height:1.55}
+@media (max-width:760px){header h1{font-size:26px}.two-col{grid-template-columns:1fr}.team-leaders{grid-template-columns:1fr}section.card{padding:22px 18px}}
+@media (max-width:640px){header h1{font-size:22px}.recommend .r-band{font-size:24px}}
+.hl-banner{background:linear-gradient(135deg,#1f5e3a,#2f8a55);color:#fff;border-radius:8px;padding:18px 22px;margin:4px 0 18px;border-left:6px solid #b8985a}
+.hl-banner .t{font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:700;opacity:.9;margin-bottom:4px}
+.hl-banner .h{font-size:20px;font-weight:800;line-height:1.3}
+.hl-banner .s{font-size:13.5px;opacity:.95;margin-top:6px}
+.hl-banner a{color:#fff;text-decoration:underline}
+.stat.green{border-left-color:#2f8a55;background:#eef7f1}
+header .badge{display:inline-block;background:#2f8a55;color:#fff;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:4px;padding:4px 10px;margin:0 6px 14px 0}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Broker Opinion of Value</div>
+    <h1>220 W Avenue 26</h1>
+    <div><span class="badge">Opportunity Zone</span><span class="badge">0.2 mi to Metro L Line</span></div>
+    <div class="subtitle">5,314 SF Urban Village development site in the Cornfield Arroyo Seco Specific Plan, with a 3,381 SF building &middot; Lincoln Heights, Los Angeles, CA 90031</div>
+    <div class="meta">
+      <span>Prepared for: Jumai Bandele, Bandele Properties LLC</span>
+      <span>Prepared by: The LAAA Team &amp; Matt Ziegler &middot; Marcus &amp; Millichap</span>
+      <span>November 2, 2026</span>
+    </div>
+    <div class="hero-frame" style="margin:24px 0 0;border:1px solid rgba(184,152,90,.5)"><img src="images/hero_aerial.png" alt="Aerial view of 220 W Avenue 26 with the lot outlined in gold"></div>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="wrap">
+    <a class="first" href="#summary">Summary</a>
+    <a href="#subject">Subject</a>
+    <a href="#location">Location</a>
+    <a href="#zoning">Zoning</a>
+    <a href="#pathways">Pathways</a>
+    <a href="#buyers">Buyer Pool</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#marketing">Marketing</a>
+    <a href="#listings">Listings</a>
+    <a href="#team">Team</a>
+  </div>
+</nav>
+
+<main>
+<div class="wrap">
+
+<section class="card" id="summary">
+  <h2>Executive Summary</h2>
+  <p>220 W Avenue 26 is a <b>5,314 SF</b> lot on Avenue 26 in Lincoln Heights, improved with a one-story 3,381 SF building from 1937 that has served as a veterinary hospital. It is zoned <b>UV(CA)</b>, the Urban Village zone of the Cornfield Arroyo Seco Specific Plan (CASP), which allows residential, commercial and light industrial uses in the same building, with no limit on unit count.</p>
+  <p>The site is about 0.2 miles from the Lincoln/Cypress station on the Metro L Line, in a Transit Priority Area and a federal Opportunity Zone. Our reading of the plan's maps gives it a maximum FAR of 3:1, about <b>15,900 SF</b> of building, and heights up to a 60 ft average. A by-right mixed-use project of up to 15 units fits on the lot, and the plan's affordable housing bonus opens a larger building. Four 100% affordable projects have been approved or filed within a mile since 2024, so affordable developers, market-rate builders and owner-users of the existing building all make up the buyer pool.</p>
+  <div class="stat-band">
+    <div class="stat"><div class="l">Lot</div><div class="v">5,314 SF</div><div class="s">0.122 acres</div></div>
+    <div class="stat"><div class="l">Zoning</div><div class="v">UV(CA)</div><div class="s">CASP Urban Village</div></div>
+    <div class="stat"><div class="l">Max FAR</div><div class="v">3:1</div><div class="s">About 15,900 SF</div></div>
+    <div class="stat"><div class="l">By Right</div><div class="v">Up to 15 units</div><div class="s">Over ground-floor commercial</div></div>
+    <div class="stat green"><div class="l">Opportunity Zone</div><div class="v">Yes</div><div class="s">Tract 06037199000</div></div>
+    <div class="stat"><div class="l">Existing Building</div><div class="v">3,381 SF</div><div class="s">Built 1937</div></div>
+  </div>
+</section>
+
+<section class="card" id="subject">
+  <h2>Subject Property</h2>
+  <div class="hero-frame"><img src="images/context_aerial.png" alt="Aerial view of the block with the lot outlined in gold"></div>
+  <div class="caption" style="margin-top:-8px;margin-bottom:12px">The lot outlined in gold, fronting Avenue 26 (Esri World Imagery). Parcel lines are approximate.</div>
+  <div class="spec-grid">
+    <div class="spec"><b>Address</b>220 W Avenue 26, Los Angeles, CA 90031</div>
+    <div class="spec"><b>APN</b>5205-014-019 &middot; Lot 5, Addition No. 3 to the Hamilton Tract</div>
+    <div class="spec"><b>Lot Size</b>5,314 SF (0.122 acres)</div>
+    <div class="spec"><b>Zoning</b>UV(CA): Urban Village, Cornfield Arroyo Seco Specific Plan &middot; General Plan: Hybrid Industrial</div>
+    <div class="spec"><b>Existing Improvements</b>One-story building, 3,381 SF, built 1937; assessor use: veterinary hospital</div>
+    <div class="spec"><b>Transit</b>Transit Priority Area; about 0.2 miles to Lincoln/Cypress Station (Metro L Line); ZIMAS shows TOC Tier 4</div>
+    <div class="spec"><b>Rent Stabilization</b>Not subject to the RSO (no residential units)</div>
+    <div class="spec"><b>Hazards</b>Flood zone X; no fault, fire or HPOZ designation on ZIMAS</div>
+    <div class="spec"><b>Community</b>Lincoln Heights Neighborhood Council &middot; Council District 1</div>
+  </div>
+</section>
+
+<section class="card" id="location">
+  <h2>Location</h2>
+  <div class="img-frame" style="aspect-ratio:8/5;margin-bottom:8px"><img src="images/location_map.png" alt="Map showing the site and Lincoln/Cypress Station"></div>
+  <div class="caption" style="margin-bottom:14px">Orange: the site. Navy: Lincoln/Cypress Station, Metro L Line (Esri Light Gray Canvas).</div>
+  <div class="tk-grid">
+    <div class="tk"><span class="n">1</span><br><b>On the rail line.</b> Lincoln/Cypress Station is about 0.2 miles away, which puts the site in a Transit Priority Area. The L Line runs to Chinatown and Union Station in a few stops.</div>
+    <div class="tk"><span class="n">2</span><br><b>A walkable block.</b> The address scores 87 for walkability and 69 for transit (Walk Score).</div>
+    <div class="tk"><span class="n">3</span><br><b>A planned growth corridor.</b> The CASP was adopted in 2013 to bring housing and jobs to the land around the Los Angeles State Historic Park and the Arroyo Seco, and its update, approved by the City Council in 2024, expands housing in the Urban Village zone.</div>
+  </div>
+</section>
+
+<section class="card" id="zoning">
+  <h2>What the Zoning Allows</h2>
+  <p>The site is governed by the 2013 Cornfield Arroyo Seco Specific Plan, which ZIMAS still shows for this parcel. The Urban Village zone permits residential, commercial and light industrial uses together and sets building size by floor area rather than unit count.</p>
+  <div class="table-scroll">
+  <table>
+    <tr><th>Standard</th><th>Urban Village (this site)</th></tr>
+    <tr><td>Maximum FAR</td><td>3:1 per the plan's FAR map (about 15,942 SF on 5,314 SF)</td></tr>
+    <tr><td>Base FAR by project size</td><td>3:1 for 15 units or fewer; 1.5:1 above 15 units unless residential is 75% or less of floor area, or the project uses the affordable housing bonus</td></tr>
+    <tr><td>Residential share</td><td>Up to 90% of floor area (about 14,348 SF); affordable incentives raise it to 95%, then 100%</td></tr>
+    <tr><td>Unit count</td><td>No density limit in the plan</td></tr>
+    <tr><td>Affordable housing bonus</td><td>Up to 3.375:1 where the map maximum is 3:1 (about 17,935 SF), plus 15 ft of height</td></tr>
+    <tr><td>Height</td><td>At least 25 ft; maximum average of 60 ft per the plan's height map</td></tr>
+  </table>
+  </div>
+  <div class="info-callout"><strong>Plan update:</strong> The City Council approved a CASP update (CPC-2021-2642-SP) on 10/29/2024 that expands housing in Urban Village, including all-residential buildings. As of the October 2025 committee report its ordinances were not yet in effect. An interim control ordinance (ZI-2526) bars only warehouse, distribution and storage uses over 15,000 SF, so it does not affect a project of this size.</div>
+  <div class="info-callout"><strong>Sources:</strong> ZIMAS Parcel Profile Report, 11/01/2026 &middot; <a href="https://planning.lacity.gov/EIR/CornfieldArroyo/Ord_Adopt/Web02_CASP.pdf" target="_blank" rel="noopener">Cornfield Arroyo Seco Specific Plan (Ord. 182617)</a>, FAR and height maps &middot; <a href="https://planning.lacity.gov/development-services/eir/cornfield-arroyo-seco-specific-plan-casp-update-1" target="_blank" rel="noopener">CASP Update</a>. FAR and height are read from the plan's maps and should be confirmed with City Planning.</div>
+</section>
+
+<section class="card" id="pathways">
+  <h2>Development Pathways</h2>
+  <p>Four ways a buyer can use the site, from keeping the building to a 100% affordable project. Floor areas are planning-level estimates on 5,314 SF, to be confirmed by the buyer's architect and land-use counsel.</p>
+  <div class="path-grid">
+    <div class="path-card pa">
+      <div class="ph">
+        <div class="ptag">Pathway A &middot; By Right</div>
+        <div class="pname">CASP Mixed-Use</div>
+        <div class="punits">Up to 15 units at 3:1</div>
+      </div>
+      <div class="pb-body"><ul>
+        <li>About 15,900 SF of building: up to about 14,300 SF of housing over at least about 1,600 SF of commercial space.</li>
+        <li>No unit cap, so unit size sets the count up to 15.</li>
+        <li>Approved under the specific plan without a density bonus application.</li>
+      </ul></div>
+      <div class="pmetric"><span class="l">Floor area</span><span class="v">~15,900 SF</span></div>
+      <div class="pmetric"><span class="l">Approval</span><span class="v">Specific plan</span></div>
+      <div class="pmetric"><span class="l">Buyer</span><span class="v">Infill builder</span></div>
+    </div>
+    <div class="path-card pb">
+      <div class="ph">
+        <div class="ptag">Pathway B &middot; Affordable Bonus</div>
+        <div class="pname">CASP Bonus Building</div>
+        <div class="punits">More than 15 units, to 3.375:1</div>
+      </div>
+      <div class="pb-body"><ul>
+        <li>The plan's affordable housing bonus lifts FAR to 3.375:1, about 17,900 SF.</li>
+        <li>Residential can reach 95% to 100% of the floor area, with 15 ft more height.</li>
+        <li>Mostly market-rate units with an affordable set-aside.</li>
+      </ul></div>
+      <div class="pmetric"><span class="l">Floor area</span><span class="v">~17,900 SF</span></div>
+      <div class="pmetric"><span class="l">Height</span><span class="v">+15 ft</span></div>
+      <div class="pmetric"><span class="l">Buyer</span><span class="v">Mixed-income builder</span></div>
+    </div>
+    <div class="path-card pc">
+      <div class="ph">
+        <div class="ptag">Pathway C &middot; 100% Affordable</div>
+        <div class="pname">Affordable Developer</div>
+        <div class="punits">Highest unit count</div>
+      </div>
+      <div class="pb-body"><ul>
+        <li>Four 100% affordable projects within a mile have been approved or filed since 2024.</li>
+        <li>Transit Priority Area and Opportunity Zone location.</li>
+        <li>Eligibility of this parcel for the City's ED 1 track (Hybrid Industrial General Plan) is to be confirmed.</li>
+      </ul></div>
+      <div class="pmetric"><span class="l">Units</span><span class="v">To be confirmed</span></div>
+      <div class="pmetric"><span class="l">Approval</span><span class="v">State or City program</span></div>
+      <div class="pmetric"><span class="l">Buyer</span><span class="v">Affordable developer</span></div>
+    </div>
+    <div class="path-card pd">
+      <div class="ph">
+        <div class="ptag">Pathway D &middot; Owner-User</div>
+        <div class="pname">Keep the Building</div>
+        <div class="punits">3,381 SF, built 1937</div>
+      </div>
+      <div class="pb-body"><ul>
+        <li>An operating veterinary or medical user, or another commercial use the zone allows.</li>
+        <li>No demolition or entitlement timeline.</li>
+        <li>Holds the land for a future project.</li>
+      </ul></div>
+      <div class="pmetric"><span class="l">Building</span><span class="v">3,381 SF</span></div>
+      <div class="pmetric"><span class="l">Approval</span><span class="v">None needed</span></div>
+      <div class="pmetric"><span class="l">Buyer</span><span class="v">User / investor</span></div>
+    </div>
+  </div>
+  <div class="info-callout"><strong>How to read these:</strong> Pathway A is the plan's by-right building and the baseline most builders will underwrite. Pathway B adds floor area and height in exchange for affordable units. Pathway C reaches the most units if the parcel qualifies for a 100% affordable program, which is the activity we see around the site. Pathway D is for a buyer who wants the building as it stands.</div>
+</section>
+
+<section class="card" id="buyers">
+  <h2>Buyer Pool: Affordable Projects Nearby</h2>
+  <p>100% affordable projects filed under the City's Executive Directive 1 (ED 1) within about a mile of the site:</p>
+  <div class="table-scroll">
+  <table>
+    <tr><th>Address</th><th class="num">Units</th><th>Status</th><th class="num">Distance</th></tr>
+    <tr><td>2119 N Broadway</td><td class="num">Pending</td><td>Filed 10/22/2025</td><td class="num">0.36 mi</td></tr>
+    <tr><td>343 S Avenue 20</td><td class="num">46</td><td>Approved 06/17/2024</td><td class="num">0.64 mi</td></tr>
+    <tr><td>3526 N Arroyo Seco Ave</td><td class="num">77</td><td>Approved 04/02/2025</td><td class="num">0.68 mi</td></tr>
+    <tr><td>1931 N Workman St</td><td class="num">90 to 137</td><td>Filed</td><td class="num">0.85 mi</td></tr>
+  </table>
+  </div>
+  <p class="fn">City of Los Angeles ED 1 case data; distances are straight-line from the site.</p>
+</section>
+
+<section class="card" id="pricing">
+  <h2>Pricing Recommendation</h2>
+  <div class="recommend">
+    <div class="r-eyebrow">Recommended List Price</div>
+    <div class="r-band">To follow with the land sale comparables</div>
+    <div class="r-sub">We will price the site per land SF and per buildable SF against closed land sales in Lincoln Heights and the surrounding neighborhoods.</div>
+  </div>
+  <p>We are pulling closed and active land sales within about 1.5 miles from the MLS and public records, and will add them here with our recommended price and expected trading range. The price will reflect the by-right floor area (Pathway A), the bonus building available under Pathway B, and the depth of the affordable-developer buyer pool.</p>
+  <p>Two facts from you will sharpen the number: whether the building is occupied and on what lease terms, and the price you have in mind.</p>
+</section>
+
+<section class="card" id="marketing">
+  <h2>Marketing Reach</h2>
+  <p>Every LAAA Team exclusive listing is syndicated across 10 listing platforms, backed by direct outreach to our database of multifamily developers, affordable housing sponsors, tax-credit developers and owner-users.</p>
+  <div class="plat-strip">
+    <span class="plat">The MLS</span>
+    <span class="plat">CoStar / LoopNet</span>
+    <span class="plat">Crexi</span>
+    <span class="plat">Brevitas</span>
+    <span class="plat">Zillow</span>
+    <span class="plat">Redfin</span>
+    <span class="plat">ApartmentBuildings.com</span>
+    <span class="plat">Duxre</span>
+    <span class="plat">MarcusMillichap.com</span>
+    <span class="plat">www.laaa.com</span>
+  </div>
+</section>
+
+<section class="card" id="listings">
+  <h2>Also Marketed by the LAAA Team</h2>
+  <p>The LAAA Team is currently marketing 8 land and development-site listings across Southern California. Each card links to the full offering at www.laaa.com.</p>
+  <div class="inv-grid">
+    <a class="inv-item" href="https://www.laaa.com/om/5151-e-arrow" target="_blank" rel="noopener"><span class="addr">5151 E Arrow Hwy</span><span class="city">Montclair</span><span class="price">$10,250,000</span><span class="facts">300 buildable units &middot; 260,271 SF (5.97 ac)</span><span class="desc">Unentitled 300-unit mixed-density apartment and townhome site in the North Montclair Downtown Specific Plan.</span><span class="go">View Listing</span></a>
+    <a class="inv-item" href="https://www.laaa.com/om/185-monterey" target="_blank" rel="noopener"><span class="addr">185 Monterey Rd</span><span class="city">South Pasadena</span><span class="price">$7,000,000</span><span class="facts">53 entitled units &middot; 54,794 SF (1.26 ac)</span><span class="desc">Fully entitled 53-unit condominium development, tract map approved June 2026.</span><span class="go">View Listing</span></a>
+    <a class="inv-item" href="https://www.laaa.com/om/2600-s-robertson" target="_blank" rel="noopener"><span class="addr">2600 S Robertson Blvd</span><span class="city">Los Angeles</span><span class="price">$6,995,000</span><span class="facts">149 entitled units &middot; 16,220 SF</span><span class="desc">ED1 100% affordable mixed-use approval, 149 units over ground-floor retail at a 3.9:1 FAR.</span><span class="go">View Listing</span></a>
+    <a class="inv-item" href="https://www.laaa.com/om/12335-osborne" target="_blank" rel="noopener"><span class="addr">12335 Osborne Pl</span><span class="city">Pacoima</span><span class="price">$3,950,000</span><span class="facts">293 RTI units &middot; 46,035 SF (1.06 ac)</span><span class="desc">Ready-to-Issue 293-unit ED1 affordable development in an Opportunity Zone, zero required parking.</span><span class="go">View Listing</span></a>
+    <a class="inv-item" href="https://www.laaa.com/om/13840-sherman" target="_blank" rel="noopener"><span class="addr">13840 Sherman Way</span><span class="city">Van Nuys</span><span class="price">$3,500,000</span><span class="facts">86 RTI units &middot; 1.05 acres</span><span class="desc">AB 2334 density bonus affordable site delivered Ready-to-Issue at close of escrow, no parking required.</span><span class="go">View Listing</span></a>
+    <a class="inv-item" href="https://www.laaa.com/om/1656-sawtelle" target="_blank" rel="noopener"><span class="addr">1656 Sawtelle Blvd</span><span class="city">Los Angeles</span><span class="price">$2,995,000</span><span class="facts">38 buildable units, up to ~52 with bonus &middot; 7,005 SF</span><span class="desc">Cleared, unentitled West LA (Little Osaka) apartment site, ~38 units via MIIP, ~52 via AB 1287/AHIP.</span><span class="go">View Listing</span></a>
+    <a class="inv-item" href="https://www.laaa.com/om/631-637-w-6th" target="_blank" rel="noopener"><span class="addr">631-637 W 6th Street</span><span class="city">San Pedro</span><span class="price">$1,475,000</span><span class="facts">10 buildable units &middot; 13,799 SF</span><span class="desc">Two-parcel by-right site: SB 1123 for-sale subdivision or duplexes plus ADUs.</span><span class="go">View Listing</span></a>
+    <a class="inv-item" href="https://www.laaa.com/om/6901-woodman" target="_blank" rel="noopener"><span class="addr">6901 Woodman Avenue</span><span class="city">Van Nuys</span><span class="price">$1,400,000</span><span class="facts">55 RTI units &middot; 10,005 SF</span><span class="desc">RTI 55-unit ED1/TOC affordable land, permits ready to pull.</span><span class="go">View Listing</span></a>
+  </div>
+  <p class="fn">Active laaa.com land listings as of November 2, 2026, excluding properties in escrow.</p>
+</section>
+
+<section class="card" id="team">
+  <h2>Your Marcus &amp; Millichap Team</h2>
+  <div class="team-leaders">
+    <div class="leader">
+      <img class="headshot-img-lg" src="images/headshot_filip-niculete.jpg" alt="Filip Niculete">
+      <div class="nm">Filip Niculete</div>
+      <div class="tt">Senior Managing Director Investments</div>
+      <div class="ct">(818) 212-2748 &middot; CA DRE 01905352</div>
+    </div>
+    <div class="leader">
+      <img class="headshot-img-lg" src="images/headshot_glen-scher.jpg" alt="Glen Scher">
+      <div class="nm">Glen Scher</div>
+      <div class="tt">Senior Managing Director Investments</div>
+      <div class="ct">(818) 212-2808 &middot; CA DRE 01962976</div>
+    </div>
+    <div class="leader">
+      <img class="headshot-img-lg" src="images/headshot_matt-ziegler.jpg" alt="Matt Ziegler">
+      <div class="nm">Matt Ziegler</div>
+      <div class="tt">Senior Managing Director Investments</div>
+      <div class="ct">(818) 212-2738 &middot; CA 01280909</div>
+    </div>
+    <div class="leader">
+      <img class="headshot-img-lg" src="images/headshot_alex-ho.jpg" alt="Alex Ho">
+      <div class="nm">Alex Ho</div>
+      <div class="tt">Associate Investments</div>
+      <div class="ct">(818) 212-2814 &middot; CA 02082325</div>
+    </div>
+  </div>
+  <h3>The LAAA Team</h3>
+  <div class="team-roster">
+    <div class="roster-card"><img class="headshot-img-lg" src="images/roster_aida-memary-scher.jpg" alt="Aida Memary Scher"><div class="nm">Aida Memary Scher</div><div class="tt">Associate Director Investments</div></div>
+    <div class="roster-card"><img class="headshot-img-lg" src="images/roster_morgan-wetmore.jpg" alt="Morgan Wetmore"><div class="nm">Morgan Wetmore</div><div class="tt">Associate</div></div>
+    <div class="roster-card"><img class="headshot-img-lg" src="images/roster_alexandro-tapia.jpg" alt="Alexandro Tapia"><div class="nm">Alexandro Tapia</div><div class="tt">Associate Investments</div></div>
+    <div class="roster-card"><img class="headshot-img-lg" src="images/roster_logan-ward.jpg" alt="Logan Ward"><div class="nm">Logan Ward</div><div class="tt">Associate Investments</div></div>
+    <div class="roster-card"><img class="headshot-img-lg" src="images/roster_luka-leader.jpg" alt="Luka Leader"><div class="nm">Luka Leader</div><div class="tt">Associate Investments</div></div>
+    <div class="roster-card"><img class="headshot-img-lg" src="images/roster_blake-lewitt.jpg" alt="Blake Lewitt"><div class="nm">Blake Lewitt</div><div class="tt">Associate Investments</div></div>
+    <div class="roster-card"><img class="headshot-img-lg" src="images/roster_mike-palade.jpg" alt="Mike Palade"><div class="nm">Mike Palade</div><div class="tt">Agent Assistant</div></div>
+    <div class="roster-card"><img class="headshot-img-lg" src="images/roster_tony-dang.jpg" alt="Tony H. Dang"><div class="nm">Tony H. Dang</div><div class="tt">Business Operations Manager</div></div>
+    <div class="roster-card"><img class="headshot-img-lg" src="images/roster_tirajeh-vossoughi-horton.jpg" alt="Tirajeh Vossoughi-Horton"><div class="nm">Tirajeh Vossoughi-Horton</div><div class="tt">Investment Brokerage Intern</div></div>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-title">Marcus &amp; Millichap | The LAAA Team</div>
+    <p>16830 Ventura Blvd, Suite 100, Encino, CA 91436 &middot; www.laaa.com</p>
+    <p>This Broker Opinion of Value is not an appraisal and has been prepared for the exclusive use of the party to whom it is addressed. The information contained herein was obtained from sources we believe to be reliable; however, Marcus &amp; Millichap makes no guarantee, warranty, or representation as to its accuracy or completeness. Development potential, floor area, unit counts, and program eligibility are planning-level estimates only and must be independently verified with the City of Los Angeles, an architect, and land-use counsel. Imagery: Esri, Maxar, Earthstar Geographics.</p>
+  </div>
+</footer>
+
+</body>
+</html>
